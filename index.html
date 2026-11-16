@@ -293,27 +293,28 @@ const OFFSETS = {1:[0], 2:[-12,12], 3:[-18,0,18]};
 const SCENARIOS = [
   {
     id:'gk-build', phase:'Possession', title:'Our goal kick — building out',
-    desc:'Our keeper has the ball and wants to play it short. Both centre backs have split wide. The other team has dropped back toward halfway.',
+    desc:'Our keeper has the ball and wants to play it short. The other team is pushing up to press: their striker is at the edge of our box, their midfielders are ready to jump on the first pass, and their defenders have moved up to halfway.',
     ball:[6,32],
-    us:{GK:[5,32],LCB:[12,14],RCB:[12,50],LWB:[30,5],CM:[28,32],RWB:[30,59],ST:[70,32]},
-    opp:{def:74,mid:62,fwd:52,center:32,spread:1}, theirGK:[96,32],
+    us:{GK:[5,32],LCB:[12,14],RCB:[12,50],LWB:[32,4],CM:[24,41],RWB:[32,60],ST:[53,32]},
+    opp:{def:52,mid:33,fwd:19,center:30,spread:1}, pins:[{id:'m',x:31,y:25}], theirGK:[94,32],
+    note:'If your league uses a build-out line, the other team has to stay behind it until the keeper plays the ball, so you get a little more time.',
     roles:{
       CB:{start:[8,26], ask:'Our keeper wants to play it short. Where should Kyra (centre back) be?',
         ideal:{x:12,y:14,rx:4,ry:4}, hint:'If both centre backs stand in the middle, how many players can one opponent cover?',
         cue:'Our goal kick → split wide to the edge of the box',
         why:'The centre backs split wide, out to the corners of the box. That spreads their forwards out, gives the keeper two easy passing options, and lets Kyra receive the ball facing up the field. Standing in the middle next to the keeper bunches us up, and one opponent can press both of them.'},
       WB:{start:[22,24], ask:'Where should Kyra stand so the keeper or centre back has an easy pass?',
-        ideal:{x:30,y:4,rx:8,ry:4}, hint:'Ball is ours. Make the field as BIG as possible.',
+        ideal:{x:32,y:4,rx:7,ry:4}, hint:'Ball is ours. Make the field as BIG as possible.',
         cue:'Our ball → get wide',
         why:'When we have the ball, Kyra’s job is width. She should be right out on the touchline, a bit ahead of the centre back, not right next to her. That gives the keeper or CB a safe pass and pulls an opponent out wide, which opens up the middle. Stand side-on so you can see the ball AND the field ahead.'},
       CM:{start:[12,32], ask:'Kyra has dropped right next to the keeper. Where should she be?',
-        ideal:{x:28,y:32,rx:7,ry:7}, hint:'If she stands right beside the keeper, one opponent can cover both of them.',
-        cue:'Show in the middle, in front of the CBs — open body',
-        why:'The CM is the link. She should be central and a bit in front of the two centre backs, in the space in front of their forwards, so the keeper or a CB can pass into her and she can turn. Standing on top of the keeper or CB bunches us up and makes one opponent enough to press both. Open your body (face sideways) so you can play forward first time.'},
-      ST:{start:[40,32], ask:'Kyra has dropped deep to help. Where should a striker be on our goal kick?',
-        ideal:{x:71,y:32,rx:6,ry:9}, hint:'If she comes deep, who keeps their defenders busy?',
+        ideal:{x:24,y:41,rx:5,ry:5}, hint:'Their striker is pressing in the middle and their midfielder is covering one side. Where is there a gap?',
+        cue:'Find the gap beside their striker — open body',
+        why:'The CM is the link. With their striker pressing in the middle, Kyra can’t stand directly behind her, because the keeper can’t pass through her. She moves into the gap beside the striker, on the side their midfielder isn’t covering, so the keeper or a CB has a clear pass and Kyra can turn. Standing on top of the keeper or CB bunches us up and makes one opponent enough to press both. Open your body (face sideways) so you can play forward first time.'},
+      ST:{start:[30,32], ask:'Kyra has dropped deep to help. Where should a striker be on our goal kick?',
+        ideal:{x:53,y:32,rx:5,ry:8}, hint:'If she comes deep, who keeps their defenders busy?',
         cue:'Stretch them — stay high on the last defender',
-        why:'The striker keeps the field long. Staying high, on the shoulder of their last defender, pins their back line and gives our team space to build in midfield. She’s also the long option if the keeper wants to go long. Dropping deep pulls their defenders forward and squashes the space for everyone.'}
+        why:'The striker keeps the field long. Their defenders have pushed up to halfway to support the press, so Kyra stays on the shoulder of their last defender, right up there with them. That stops them squeezing up any further and gives our team space to build. She’s also the long option if the keeper wants to go long. Dropping deep pulls their defenders forward and squashes the space for everyone.'}
     }
   },
   {
