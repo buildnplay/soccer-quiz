@@ -81,6 +81,18 @@
   .fb{font-size:13px;color:var(--muted);margin:2px 0 4px;line-height:1.4}
   #breakdown{margin-bottom:10px}
   .seg.wrap{flex-wrap:wrap}
+  /* button rows wrap instead of running off narrow screens */
+  .seg{flex-wrap:wrap;max-width:100%}
+  .grp{min-width:0;max-width:100%}
+  @media (max-width:600px){
+    .wrap{padding:10px}
+    .setup{gap:10px;padding:10px}
+    .seg button{padding:7px 9px;font-size:12.5px}
+    header{gap:8px}
+    .score{font-size:17px;padding:5px 10px}
+    .card{padding:13px}
+    .lookbar span{display:none}
+  }
   .pitchstage{position:relative}
   #pitch3dWrap{display:none;position:absolute;inset:0}
   #pitch3dWrap canvas{width:100%!important;height:auto!important;display:block;border-radius:8px;touch-action:none;cursor:crosshair}
